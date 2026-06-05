@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Mom!</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #fff5fb; display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: Georgia, serif; }
+    .card { display: flex; flex-direction: column; align-items: center; padding: 2rem 1rem 2.5rem; text-align: center; max-width: 520px; width: 100%; }
+    #confetti-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 10; }
+    .title { font-size: 30px; font-weight: 500; color: #c94090; margin-bottom: 12px; }
+    .message-box { max-width: 380px; background: #ffffff; border: 1px solid #f28bbd; border-radius: 16px; padding: 1.5rem; margin-top: 1.5rem; box-shadow: 0 4px 15px rgba(242, 139, 189, 0.2); position: relative; display: none; }
+    .open-btn { margin-top: 1.5rem; padding: 12px 24px; background: linear-gradient(135deg, #f28bbd, #c94090); color: #fff; border: none; border-radius: 24px; cursor: pointer; font-weight: 500; }
+    .message-text { font-size: 15px; color: #6b3060; line-height: 1.8; font-style: italic; }
+    .message-sig { font-size: 14px; color: #c94090; font-weight: 500; margin-top: 0.75rem; }
+    .blow-btn { margin-top: 1.25rem; background: #c94090; color: #fff; border: none; border-radius: 24px; padding: 10px 28px; cursor: pointer; }
+  </style>
+</head>
+<body>
+<canvas id="confetti-canvas"></canvas>
+<div class="card">
+  <div class="title">Happy Birthday, Mom!</div>
+  <button class="blow-btn" id="blowbtn" onclick="blowAll()">Blow out candles! 💨</button>
+  
+  <button class="open-btn" id="openbtn" onclick="toggleMessage()">💌 Tap to read my note</button>
+  <div id="message-container" class="message-box">
+    <p class="message-text">To the most wonderful mom in the world — thank you for your endless love, your warm hugs, and every little thing you do that makes life brighter. Today is all about you. I love you more than words could ever say.</p>
+    <p class="message-sig">With all my love, always ❤️</p>
+  </div>
+</div>
+<script>
+  function toggleMessage() {
+    document.getElementById('message-container').style.display = 'block';
+    document.getElementById('openbtn').style.display = 'none';
+  }
+  function blowAll() {
+    alert("Make a wish! ✨");
+    // Add confetti logic here as per previous code
+  }
+</script>
+</body>
+</html>
